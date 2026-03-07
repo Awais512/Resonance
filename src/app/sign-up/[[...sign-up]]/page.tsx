@@ -1,6 +1,6 @@
 import { SignUp } from "@clerk/nextjs";
 
-const SignUpPage = () => {
+export default function SignUpPage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background">
       <SignUp
@@ -13,6 +13,4 @@ const SignUpPage = () => {
       />
     </div>
   );
-};
-
-export default SignUpPage;
+}
