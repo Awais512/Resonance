@@ -10,7 +10,9 @@ const Page = async ({
   searchParams: Promise<{ text?: string; voiceId?: string }>;
 }) => {
   const { text, voiceId } = await searchParams;
+
   prefetch(trpc.voices.getAll.queryOptions());
+  prefetch(trpc.generations.getAll.queryOptions());
 
   return (
     <HydrateClient>
